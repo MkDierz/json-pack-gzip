@@ -26,18 +26,20 @@ const byteLength = jsonPackGzip.calculateSize(data);
 
 ## API
 
-### ```compress(jsonObject)```
+### ```compress(jsonObject, debug = false)```
 
 Compresses a JSON object using Gzip compression algorithm. The input JSON object is first packed into a homogeneous array and then stringified before compression.
 
 - ```jsonObject```(Array): The JSON object to be compressed.
+- ```debug```(Boolean): options for debugging, defaults to false.
 
 Returns a compressed data as a Buffer object.
 
-### ```decompress(jsonBuffer)```
+### ```decompress(jsonBuffer, debug = false)```
 Decompresses a Buffer object to a JSON object using Gzip decompression algorithm. The decompressed data is first parsed from a homogeneous array into a list of objects.
 
 - ```jsonBuffer``` (Buffer): The Buffer object to be decompressed.
+- ```debug```(Boolean): options for debugging, defaults to false.
 
 Returns a decompressed and unpacked JSON object as a list of objects.
 
