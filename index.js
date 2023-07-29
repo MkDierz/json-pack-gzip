@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { gunzip, gzip } = require('./lib/gzip');
 const {
     pack, unpack, parse, stringify,

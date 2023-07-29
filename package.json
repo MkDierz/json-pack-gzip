@@ -37,7 +37,8 @@
     "semantic-release": "^21.0.7"
   },
   "dependencies": {
-    "debug": "^4.3.4"
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3"
   },
   "publishConfig": {
     "@MkDierz:registry": "https://npm.pkg.github.com"
