@@ -27,7 +27,7 @@ function gzipResponse(json) {
     return json;
 }
 
-export default async function middleware(req, res, next) {
+async function middleware(req, res, next) {
     const requestCompressed = req.headers['compressed-request'] || 'none';
     const responseCompressed = req.headers['compressed-response'] || 'none';
 
@@ -83,3 +83,5 @@ export default async function middleware(req, res, next) {
     res.send = newSendFunction();
     return next();
 }
+
+exports.middleware = middleware;
