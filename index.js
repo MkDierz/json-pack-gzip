@@ -5,6 +5,7 @@ const {
 } = require('./lib/hpack');
 const { calculateSize } = require('./utils/calculateSize');
 const { debugWrapper } = require('./utils/debugWrapper');
+const { default: jsonCompressorMiddleware } = require('./utils/middleware');
 
 /**
  * Compresses a JSON object using the Gzip compression algorithm. This is accomplished by first
@@ -75,7 +76,6 @@ function decompress(jsonBuffer, debug = false) {
         return errorDebug(error);
     }
 }
-
 module.exports = {
     compress,
     decompress,
@@ -86,4 +86,5 @@ module.exports = {
     gzip,
     gunzip,
     calculateSize,
+    jsonCompressorMiddleware,
 };
